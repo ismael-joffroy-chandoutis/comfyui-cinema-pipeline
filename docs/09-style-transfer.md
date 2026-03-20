@@ -137,7 +137,29 @@ Quand un style est trop niche ou spécifique pour être connu du modèle de base
 - Base : **Flux** ou **Z-Image**
 - Utilisation : trigger word dans le prompt → le modèle génère nativement dans ce style
 - Liberté totale — pas lié à une image source
-- Contrainte : juste une collection d'images dans le style suffit pour l'entraînement
+- Dataset simple : juste une collection d'images dans le style, sans version "originale"
+
+---
+
+## Entraîner son propre LoRA
+
+### Outils disponibles
+
+| Outil | Avantage | Modèles supportés |
+|-------|----------|-------------------|
+| **fal.ai** (endpoints training) | Chemin le plus rapide, sans config | Z-Image, Flux Klein, Qwen Image Edit |
+| **AI Toolkit** (local ou RunPod) | Contrôle total sur le process | Flux, SDXL, Wan |
+
+### Recommandation de modèle de base pour commencer
+**Flux Klein (9B paramètres)** — sweet spot pour l'entraînement LoRA :
+- Rapide à entraîner
+- Apprend bien sur des datasets de taille raisonnable
+- Bon point de départ si tu n'as pas encore de préférence
+
+### Réalités du terrain
+- Prévoir plusieurs runs d'entraînement avant d'obtenir un résultat satisfaisant
+- La qualité du dataset est le facteur n°1 — des images propres et cohérentes > un grand volume
+- Tester chaque LoRA sur un ensemble varié de prompts avant de l'utiliser en production
 
 ---
 
