@@ -85,6 +85,8 @@ All links are real. All stability ratings are honest. No hype.
 | [Open Creative Studio (OCS)](docs/07-ocs-perilli.md) | Alessandro Perilli's all-in-one ComfyUI system |
 | [Hardware Guide](docs/08-hardware.md) | VRAM requirements, GPU benchmarks, optimization |
 | [**Blender VSE + AI Workflow**](docs/09-blender-vse-workflow.md) | **Pallaidium, tin2tin ecosystem, ControlNet stills→video, FCP roundtrip** |
+| [**Style Transfer Guide**](docs/10-style-transfer.md) | **Recraft, NanoBanana Pro, Seedream 5.0-lite, LoRA training, batch workflows** |
+| [**Cloud API Reference**](docs/11-cloud-api-reference.md) | **ComfyUI Cloud + Local API, MCP servers, hybrid switching, batch scripts** |
 
 ---
 
@@ -202,7 +204,7 @@ This is a living document. If you're a filmmaker working with ComfyUI, PRs are w
 
 Research compiled by [Ismael Joffroy Chandoutis](https://ismaeljoffroychandoutis.com/) with Claude Code (Anthropic).
 
-February 2025. Updated regularly.
+February 2025. Updated March 2026.
 
 ---
 
