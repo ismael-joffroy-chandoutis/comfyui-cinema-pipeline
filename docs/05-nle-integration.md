@@ -37,13 +37,32 @@ Status of ComfyUI integration with professional video editing software. Honest a
 
 ## 2. Final Cut Pro + ComfyUI
 
-### Stability: 0/10 -- Dead end
+### Stability: 7/10 -- Production-ready via SpliceKit MCP (updated April 2026)
 
-- **No integration exists**. Apple's walled garden.
-- [FxPlug](https://developer.apple.com/documentation/fxplug) SDK (Metal only, v4.3.x) is the only path. Would require building a Swift/Metal plugin that communicates with ComfyUI HTTP.
-- Third-party AI plugins (MotionVFX, CommandPost) focus on captions/auto-editing, not generative AI.
-- FCP 11 has built-in ML (Magnetic Mask, Smart Conform, Object Tracking) but limited to Apple's models.
-- **Verdict**: Impractical. Would require major Swift/Metal development with no existing building blocks.
+**Update April 2026**: The FCP situation changed significantly with [SpliceKit](https://github.com/elliotttate/SpliceKit), a dylib injected directly into FCP's process that exposes 78,000+ ObjC classes via JSON-RPC on localhost:9876. Claude Code connects as an MCP client with 200+ tools. This makes FCP programmatically controllable at a level no other NLE offers today.
+
+**Working workflow (FCP ↔ ComfyUI via SpliceKit):**
+1. `export_xml("/tmp/edit.fcpxml")` — export timeline programmatically (no dialog)
+2. Parse FCPXML in Python, extract clip list + timings
+3. Run frames through ComfyUI pipeline (Wan 2.2, LTX-2, Flux.2, etc.)
+4. `import_fcpxml("/tmp/comp.fcpxml")` — inject result back into FCP
+
+**Available SpliceKit tools relevant to ComfyUI pipeline:**
+- `export_xml()` / `import_fcpxml()` — FCPXML roundtrip without dialogs
+- `get_timeline_clips()` — full clip metadata (path, timecode, duration, effects)
+- `detect_scene_changes()` — auto-blade before sending to ComfyUI
+- `blade_at_times([...])` — precise editorial cuts post-generation
+- `apply_effect()`, `apply_transition()` — apply ComfyUI results to timeline
+
+**Known limitations (macOS 26.3 + FCP 12.2 build 447037):**
+- DualTimeline and Lua VM crash on macOS 26.3 — fixed in macOS 26.4+
+- See [SpliceKit PR #51](https://github.com/elliotttate/SpliceKit/pull/51) for the guard patch
+- All 179 MCP tools that don't touch the crashing swizzles work fine on 26.3
+
+**Earlier assessment (before SpliceKit):**
+- [FxPlug](https://developer.apple.com/documentation/fxplug) SDK (Metal only) — native plugin path, impractical for ComfyUI
+- CommandPost / MotionVFX — caption/editing focused, not generative AI
+- FCP 12.2 built-in ML (Magnetic Mask, Smart Conform) — Apple models only, no ComfyUI
 
 ---
 
@@ -167,9 +186,9 @@ Krea has an [API (Dec 2025)](https://docs.krea.ai/home) but no NLE plugin.
 
 | NLE | Integration Score | Path Forward |
 |---|---|---|
-| **DaVinci Resolve** | 5/10 | Python API + MCP + custom bridge. Best bet. |
-| **Premiere Pro** | 0/10 | UXP plugin buildable. JS-based, feasible. |
-| **Final Cut Pro** | 0/10 | Apple walled garden. Impractical. |
-| **Blender** | 4/10 | Has nodes but 90% fail rate. Wait for Feb 2026 update. |
-| **After Effects** | 1/10 | Pre-alpha plugin only. Use EXR workflow. |
-| **Manual batch** | 8/10 | Most practical today. |
+| **Final Cut Pro** | 7/10 | **SpliceKit MCP** (April 2026) — in-process dylib, 200+ tools, export_xml→ComfyUI→import_fcpxml. macOS 26.4+ for full stability. |
+| **DaVinci Resolve** | 5/10 | Python API + MCP servers (Gursky, Tooflex). Custom roundtrip feasible, not yet prod-ready. |
+| **Blender** | 4/10 | Pallaidium (direct models) + ComfyUI-BlenderAI-node (ComfyUI as server). 90% install fail rate. |
+| **Premiere Pro** | 0/10 | UXP plugin buildable (Dec 2025+). JS-based, not yet built. |
+| **After Effects** | 1/10 | Pre-alpha plugin only. Use EXR sequence workflow. |
+| **Manual batch** | 8/10 | Most practical for multi-NLE. Still recommended for DaVinci/Premiere. |
