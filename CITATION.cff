@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use or cite this work, please credit it as below."
+title: "comfyui-cinema-pipeline"
+abstract: "ComfyUI for professional cinema production. 70+ workflows, honest stability ratings, hybrid local/cloud architecture. Not hobbyist image generation."
+type: software
+authors:
+  - given-names: "Ismaël"
+    family-names: "Joffroy Chandoutis"
+    website: "https://github.com/12georgiadis"
+repository-code: "https://github.com/12georgiadis/comfyui-cinema-pipeline"
+url: "https://github.com/12georgiadis/comfyui-cinema-pipeline"
+license: PolyForm-Noncommercial-1.0.0
