@@ -16,11 +16,11 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ---
 
 Author: Ismaël Joffroy Chandoutis (https://ismaeljoffroychandoutis.com/)
-Repository: https://github.com/12georgiadis/comfyui-cinema-pipeline
+Repository: https://github.com/ismael-joffroy-chandoutis/comfyui-cinema-pipeline
 Contact: augustelumieres@gmail.com
 
 This project is part of the "Spectre" workflow ecosystem
-(https://github.com/12georgiadis/spectre) for post-documentary AI cinema.
+(https://github.com/ismael-joffroy-chandoutis/spectre) for post-documentary AI cinema.
 
 The AGPL-3.0 license requires that any modified version distributed —
 including as a network service — must remain open-source under the same

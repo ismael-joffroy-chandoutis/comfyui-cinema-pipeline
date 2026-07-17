@@ -1,3 +1,5 @@
+**English** · [Français](README.fr.md)
+
 # ComfyUI Cinema Pipeline
 
 **AI/generative pipeline architecture for professional cinema production.**
@@ -139,7 +141,7 @@ Each template has a `.meta.json` sidecar with defaults, constraints, recommended
 
 ```bash
 # 1. Clone this repo
-git clone https://github.com/12georgiadis/comfyui-cinema-pipeline.git
+git clone https://github.com/ismael-joffroy-chandoutis/comfyui-cinema-pipeline.git
 cd comfyui-cinema-pipeline
 
 # 2. Run setup (clones MCP server, installs deps, creates .env)
@@ -210,4 +212,4 @@ February 2025. Updated March 2026.
 
 ## License
 
-MIT
+[PolyForm Noncommercial 1.0.0](LICENSE.md)

@@ -2,7 +2,7 @@
 
 <https://polyformproject.org/licenses/noncommercial/1.0.0>
 
-Required Notice: Copyright Ismaël Joffroy Chandoutis (https://github.com/12georgiadis)
+Required Notice: Copyright Ismaël Joffroy Chandoutis (https://github.com/ismael-joffroy-chandoutis)
 
 ## Acceptance
 
@@ -20,7 +20,7 @@ The licensor grants you an additional copyright license to distribute copies of 
 
 You must ensure that anyone who gets a copy of any part of the software from you also gets a copy of these terms or the URL for them above, as well as copies of any plain-text lines beginning with `Required Notice:` that the licensor provided with the software. For example:
 
-> Required Notice: Copyright Ismaël Joffroy Chandoutis (https://github.com/12georgiadis)
+> Required Notice: Copyright Ismaël Joffroy Chandoutis (https://github.com/ismael-joffroy-chandoutis)
 
 ## Changes and New Works License
 

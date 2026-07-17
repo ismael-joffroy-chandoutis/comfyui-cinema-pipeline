@@ -6,7 +6,7 @@ type: software
 authors:
   - given-names: "Ismaël"
     family-names: "Joffroy Chandoutis"
-    website: "https://github.com/12georgiadis"
-repository-code: "https://github.com/12georgiadis/comfyui-cinema-pipeline"
-url: "https://github.com/12georgiadis/comfyui-cinema-pipeline"
+    website: "https://github.com/ismael-joffroy-chandoutis"
+repository-code: "https://github.com/ismael-joffroy-chandoutis/comfyui-cinema-pipeline"
+url: "https://github.com/ismael-joffroy-chandoutis/comfyui-cinema-pipeline"
 license: PolyForm-Noncommercial-1.0.0
