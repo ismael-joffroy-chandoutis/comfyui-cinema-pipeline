@@ -1,17 +1,8 @@
 Copyright (C) 2026 Ismaël Joffroy Chandoutis
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as
-published by the Free Software Foundation, either version 3 of the
-License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
+This project is licensed under the PolyForm Noncommercial License 1.0.0.
+See LICENSE.md for the full license text and CITATION.cff for citation
+metadata. No other license applies to this repository.
 
 ---
 
@@ -22,8 +13,9 @@ Contact: augustelumieres@gmail.com
 This project is part of the "Spectre" workflow ecosystem
 (https://github.com/ismael-joffroy-chandoutis/spectre) for post-documentary AI cinema.
 
-The AGPL-3.0 license requires that any modified version distributed —
-including as a network service — must remain open-source under the same
-license. This choice is deliberate: it aligns with a positioning of
-"artisan post-OSS" cinema, transparent training data, and reproducibility
-as core ethical values.
+The PolyForm Noncommercial license permits use, modification, and
+distribution of this work for any purpose other than commercial use,
+provided the required notice (see LICENSE.md) is preserved. This choice
+is deliberate: it aligns with a positioning of "artisan post-OSS" cinema,
+transparent training data, and reproducibility as core ethical values,
+while reserving commercial exploitation of the work to the author.
