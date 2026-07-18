@@ -1,3 +1,5 @@
+<img src="banner.svg" alt="ComfyUI Cinema Pipeline" width="100%">
+
 **English** · [Français](README.fr.md)
 
 # ComfyUI Cinema Pipeline
