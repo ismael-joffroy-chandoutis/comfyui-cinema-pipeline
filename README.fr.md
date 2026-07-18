@@ -206,7 +206,7 @@ C'est un document vivant. Si vous êtes cinéaste et travaillez avec ComfyUI, le
 
 ## Crédits
 
-Recherche compilée par [Ismael Joffroy Chandoutis](https://ismaeljoffroychandoutis.com/) avec Claude Code (Anthropic).
+Recherche compilée par [Ismael Joffroy Chandoutis](https://ismaeljoffroychandoutis.com/).
 
 Février 2025. Mis à jour mars 2026.
 

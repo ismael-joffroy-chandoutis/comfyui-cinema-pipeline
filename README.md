@@ -206,7 +206,7 @@ This is a living document. If you're a filmmaker working with ComfyUI, PRs are w
 
 ## Credits
 
-Research compiled by [Ismael Joffroy Chandoutis](https://ismaeljoffroychandoutis.com/) with Claude Code (Anthropic).
+Research compiled by [Ismael Joffroy Chandoutis](https://ismaeljoffroychandoutis.com/).
 
 February 2025. Updated March 2026.
 
