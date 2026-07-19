@@ -12,7 +12,7 @@ Le problème difficile dans le cinéma IA, c'est la cohérence temporelle sur un
 
 Ce dépôt documente ce qui marche, ce qui ne marche pas, et comment tout assembler pour une vraie production.
 
-**Auteur :** [Ismaël Joffroy Chandoutis](https://ismaeljoffroychandoutis.com/) — cinéaste post-documentaire, César 2022, Cannes (Semaine de la Critique). Ces workflows sont testés sur des productions réelles.
+**Auteur :** [Ismaël Joffroy Chandoutis](https://ismaeljoffroychandoutis.com/), cinéaste post-documentaire, César 2022, Cannes (Semaine de la Critique). Ces workflows sont testés sur des productions réelles.
 
 **Matériel :** RTX 5090 (32GB local) + Comfy Cloud (96GB RTX 6000 Pro) + Mac pour le montage.
 
@@ -24,8 +24,8 @@ Ce dépôt documente ce qui marche, ce qui ne marche pas, et comment tout assemb
 
 | Film | Festival | Usage IA |
 |---|---|---|
-| *The Goldberg Variations* (en développement) | Villa Albertine 2026 | Pipeline génératif complet — scènes Blender → ControlNet → Wan 2.2 |
-| *Virus* (en développement) | — | Visualisation d'infrastructure cybercriminelle, Gaussian Splatting |
+| *The Goldberg Variations* (en développement) | Villa Albertine 2026 | Pipeline génératif complet : scènes Blender → ControlNet → Wan 2.2 |
+| *Virus* (en développement) | - | Visualisation d'infrastructure cybercriminelle, Gaussian Splatting |
 
 *Des captures d'écran et exports de workflows issus de la production seront ajoutés ici au fil de l'avancement des films.*
 
@@ -100,7 +100,7 @@ Tous les liens sont réels. Toutes les notes de stabilité sont honnêtes. Pas d
 
 ### Ce qui marche aujourd'hui (mis à jour février 2026)
 - ComfyUI + serveurs MCP = Claude Code peut générer images/vidéos par programmation
-- **LTX-2** : 4K, 50fps, 20s, audio+vidéo en une passe — qualité production
+- **LTX-2** : 4K, 50fps, 20s, audio+vidéo en une passe, qualité production
 - **Wan 2.2** : 1080p natif, architecture MoE, contrôle caméra
 - **Flux.2 Klein** : sortie 4MP, 10 images multi-référence, support ControlNet
 - **Seedance 2.0** (ByteDance) : qualité cinéma 2K, sync audio, février 2026
@@ -168,10 +168,10 @@ python scripts/detect-nodes.py http://YOUR_COMFYUI_IP:8188
 | Outil | Note | Remarques |
 |---|---|---|
 | ComfyUI core | 9/10 | Solide comme un roc |
-| **LTX-2** | **9/10** | **4K, 50fps, 20s, audio+vidéo — prêt production** |
+| **LTX-2** | **9/10** | **4K, 50fps, 20s, audio+vidéo, prêt production** |
 | Workflows Wan 2.2 | 8/10 | Architecture MoE, 1080p natif, contrôle caméra |
 | **Flux.2 Klein** | **8/10** | **4MP, 10 images multi-réf, ControlNet stable** |
-| **Seedance 2.0** | **7/10** | **Qualité cinéma 2K, sync audio — février 2026** |
+| **Seedance 2.0** | **7/10** | **Qualité cinéma 2K, sync audio, février 2026** |
 | Serveurs MCP ComfyUI | 6/10 | Plusieurs options, quelques aspérités |
 | DaVinci Resolve MCP | 5/10 | Fonctionnel, nécessite du dev sur-mesure |
 | SwarmUI | 7/10 | Bon compromis simplicité/puissance |

@@ -17,7 +17,7 @@ Blender VSE n'est pas le meilleur montage NLE (pas de gestion de projet robuste,
 
 ---
 
-## 1. TIN2TIN — Écosystème VSE (167 repos)
+## 1. TIN2TIN : Écosystème VSE (167 repos)
 
 Developer : film director, screenwriter, AI researcher. Le plus prolific contributeur VSE de Blender.
 
@@ -33,9 +33,9 @@ Developer : film director, screenwriter, AI researcher. Le plus prolific contrib
 #### Roundtrip / Interchange
 | Repo | Format | Sens | Status |
 |------|--------|------|--------|
-| **[fcpxml_import](https://github.com/tin2tin/fcpxml_import)** | FCPXML | FCP → Blender | Stable ✓ |
-| **[VSE_OTIO_Export](https://github.com/tin2tin/VSE_OTIO_Export)** | OpenTimelineIO | Blender → DaVinci | Stable ✓ |
-| **[Export_EDL](https://github.com/tin2tin/Export_EDL)** | EDL | Blender → tout NLE | Stable ✓ |
+| **[fcpxml_import](https://github.com/tin2tin/fcpxml_import)** | FCPXML | FCP → Blender | Stable |
+| **[VSE_OTIO_Export](https://github.com/tin2tin/VSE_OTIO_Export)** | OpenTimelineIO | Blender → DaVinci | Stable |
+| **[Export_EDL](https://github.com/tin2tin/Export_EDL)** | EDL | Blender → tout NLE | Stable |
 | **[VSE_File_Menu](https://github.com/tin2tin/VSE_File_Menu)** | UI UX | Import/export amélioré | Actif |
 
 #### Audio & Sous-titres
@@ -44,17 +44,17 @@ Developer : film director, screenwriter, AI researcher. Le plus prolific contrib
 | **[Subtitle_Editor](https://github.com/tin2tin/Subtitle_Editor)** | Transcription auto Whisper, traduction, batch styling |
 | **[Scene_Strip_Tools](https://github.com/tin2tin/scene_strip_tools)** | Ponts 3D View ↔ Sequencer (aperçu 3D en temps réel) |
 
-**Référence complète :** [Awesome_VSE_Addons](https://github.com/tin2tin/Awesome_VSE_Addons) — liste curatée par tin2tin lui-même.
+**Référence complète :** [Awesome_VSE_Addons](https://github.com/tin2tin/Awesome_VSE_Addons), liste curatée par tin2tin lui-même.
 
 ---
 
-## 2. Pallaidium — Studio IA dans VSE
+## 2. Pallaidium : Studio IA dans VSE
 
 ### Ce que c'est
 
 L'add-on le plus complet pour la production cinéma IA dans Blender. Génère directement dans la timeline VSE, sans sortir de Blender.
 
-Pallaidium n'utilise **pas** ComfyUI — il tourne les modèles directement via Diffusers/HuggingFace.
+Pallaidium n'utilise **pas** ComfyUI : il tourne les modèles directement via Diffusers/HuggingFace.
 
 ### Modèles supportés (Feb 2026)
 
@@ -69,9 +69,9 @@ Pallaidium n'utilise **pas** ComfyUI — il tourne les modèles directement via 
 
 | Plateforme | Status | Notes |
 |------------|--------|-------|
-| Windows | ✓ Production | CUDA 12.4, NVIDIA 6GB+ |
-| Linux | △ Limité | Communautaire |
-| **macOS** | △ Expérimental | MPS, via issues GitHub |
+| Windows | Production | CUDA 12.4, NVIDIA 6GB+ |
+| Linux | Limité | Communautaire |
+| **macOS** | Expérimental | MPS, via issues GitHub |
 
 **Exigences :** Blender 4.5.3+, CUDA 12.4, 20GB+ espace disque (téléchargements modèles)
 
@@ -135,10 +135,10 @@ Export ProRes → DaVinci (OTIO) → FCP
 
 ### ControlNet disponibles en Feb 2026
 
-- **XLabs-AI ControlNet** (Canny + Depth v3) — pour Flux.1/Flux.2
-- **InstantX Flux Union ControlNet** — multi-mode (canny, depth, blur, pose)
-- **LTX-2 ControlNet** (WaveSpeedAI) — depth, canny, pose pour LTX-2 19B
-- **Wan 2.1 ControlNet** — inference rapide, bonne pour prototypage
+- **XLabs-AI ControlNet** (Canny + Depth v3) : pour Flux.1/Flux.2
+- **InstantX Flux Union ControlNet** : multi-mode (canny, depth, blur, pose)
+- **LTX-2 ControlNet** (WaveSpeedAI) : depth, canny, pose pour LTX-2 19B
+- **Wan 2.1 ControlNet** : inference rapide, bonne pour prototypage
 
 ---
 
@@ -148,10 +148,10 @@ Export ProRes → DaVinci (OTIO) → FCP
 
 | Liaison | Status | Notes |
 |---------|--------|-------|
-| FCP → Blender VSE | ✓ Stable | via fcpxml_import (tin2tin) |
-| Blender VSE → DaVinci | ✓ Stable | via OTIO (VSE_OTIO_Export) |
-| Blender VSE → FCP | △ Partiel | OTIO → FCP non fiable ; EDL possible |
-| DaVinci → Blender | △ Manuel | Export clips individuels, réassemblage |
+| FCP → Blender VSE | Stable | via fcpxml_import (tin2tin) |
+| Blender VSE → DaVinci | Stable | via OTIO (VSE_OTIO_Export) |
+| Blender VSE → FCP | Partiel | OTIO → FCP non fiable ; EDL possible |
+| DaVinci → Blender | Manuel | Export clips individuels, réassemblage |
 
 **Verdict :** Un vrai aller-retour Blender ↔ FCP n'est pas production-ready. La chaîne recommandée est **FCP → Blender VSE → DaVinci**.
 
@@ -205,7 +205,7 @@ Pour accéder à tous les modèles ComfyUI depuis Blender (pas seulement ceux de
 - [GitHub](https://github.com/AIGODLIKE/ComfyUI-BlenderAI-node)
 - Génère auto une UI Blender qui mirror les nodes ComfyUI
 - Envoi vers ComfyUI local ou distant (via Tailscale pour RTX 5090 Windows)
-- **Support :** Windows 10/11 ✓, Linux △, macOS ✗
+- **Support :** Windows 10/11 pris en charge, Linux partiel, macOS non pris en charge
 - **Stability :** 4/10 (2026.2 release améliore installation)
 
 ### Méthode 2 : StableGen (sakalond)
@@ -226,12 +226,12 @@ Pour accéder à tous les modèles ComfyUI depuis Blender (pas seulement ceux de
 
 ---
 
-## 6. Modèles vidéo février 2026 — mise à jour
+## 6. Modèles vidéo février 2026 : mise à jour
 
-### LTX-2 (Lightricks) — game changer
+### LTX-2 (Lightricks) : game changer
 
 - **4K** (3840×2160), **50 FPS**, jusqu'à **20 secondes**
-- **Audio + Vidéo en un seul pass** — élimine une étape de post-production
+- **Audio + Vidéo en un seul pass** : élimine une étape de post-production
 - ComfyUI : intégré nativement (aucun node externe requis)
 - NVFP8 : -30% taille, 2x plus rapide
 - NVFP4 : 3x plus rapide, -60% VRAM (NVIDIA-optimized ComfyUI)
@@ -240,14 +240,14 @@ Pour accéder à tous les modèles ComfyUI depuis Blender (pas seulement ceux de
 
 ### Flux.2 Klein (BFL)
 
-- 4B et 9B params — optimisé hardware consumer
+- 4B et 9B params : optimisé hardware consumer
 - **Sortie 4MP** (vs 1MP pour Flux.1)
 - **Multi-référence** : jusqu'à 10 images simultanées (cohérence de style/sujet)
 - **JSON prompt structuré** : contrôle précis de la composition
 - ControlNet : XLabs-AI v3 (Canny + Depth), InstantX Union
 - Mis à jour dans Pallaidium : 2026-01-23
 
-### Seedance 2.0 (ByteDance) — nouveau
+### Seedance 2.0 (ByteDance) : nouveau
 
 - **2K cinema-grade** output
 - **Audio + Vidéo natif** synchronisé
@@ -258,14 +258,14 @@ Pour accéder à tous les modèles ComfyUI depuis Blender (pas seulement ceux de
 ### Wan 2.2 (Alibaba)
 
 - **1080p natif** (vs 720p pour 2.1)
-- Architecture MoE (Mixture-of-Experts) — premier modèle open-source vidéo avec MoE
+- Architecture MoE (Mixture-of-Experts) : premier modèle open-source vidéo avec MoE
 - VACE 2.0 : contrôle caméra amélioré
 - Disponible : T2V-A14B, I2V-A14B
 - Templates "Fun Camera" dans ComfyUI core
 
 ---
 
-## 7. RTX 5090 — Configuration ComfyUI
+## 7. RTX 5090 : Configuration ComfyUI
 
 Setup requis pour Pallaidium + ComfyUI sur la machine Windows :
 
@@ -309,9 +309,9 @@ nvcc --version
 
 ## Ressources
 
-- [tin2tin GitHub](https://github.com/tin2tin) — tous les repos VSE
-- [Awesome_VSE_Addons](https://github.com/tin2tin/Awesome_VSE_Addons) — liste curatée
-- [Pallaidium](https://github.com/tin2tin/Pallaidium) — studio IA VSE
-- [ComfyUI LTX-2](https://docs.comfy.org/tutorials/video/ltx/ltx-2) — doc officielle
-- [XLabs ControlNet](https://github.com/XLabs-AI/x-flux) — ControlNet pour Flux
-- [LTX-2 ControlNet](https://www.runcomfy.com/comfyui-workflows/ltx-2-controlnet-in-comfyui-depth-controlled-video-workflow) — workflow depth-guided
+- [tin2tin GitHub](https://github.com/tin2tin), tous les repos VSE
+- [Awesome_VSE_Addons](https://github.com/tin2tin/Awesome_VSE_Addons), liste curatée
+- [Pallaidium](https://github.com/tin2tin/Pallaidium), studio IA VSE
+- [ComfyUI LTX-2](https://docs.comfy.org/tutorials/video/ltx/ltx-2), doc officielle
+- [XLabs ControlNet](https://github.com/XLabs-AI/x-flux), ControlNet pour Flux
+- [LTX-2 ControlNet](https://www.runcomfy.com/comfyui-workflows/ltx-2-controlnet-in-comfyui-depth-controlled-video-workflow), workflow depth-guided

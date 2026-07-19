@@ -8,11 +8,11 @@
 
 Built by a filmmaker for filmmakers. Not hobbyist image generation.
 
-The hard problem in AI cinema is temporal consistency across a full shot — keeping hair, clothes, micro-details coherent frame by frame. That's what this pipeline solves, by routing Blender 3D geometry data into ComfyUI as ControlNet conditioning.
+The hard problem in AI cinema is temporal consistency across a full shot, keeping hair, clothes, micro-details coherent frame by frame. That's what this pipeline solves, by routing Blender 3D geometry data into ComfyUI as ControlNet conditioning.
 
 This repo documents what works, what doesn't, and how to wire it all together for a real production.
 
-**Author:** [Ismaël Joffroy Chandoutis](https://ismaeljoffroychandoutis.com/) — post-documentary filmmaker, César 2022, Cannes (Semaine de la Critique). These workflows are tested on real productions.
+**Author:** [Ismaël Joffroy Chandoutis](https://ismaeljoffroychandoutis.com/), post-documentary filmmaker, César 2022, Cannes (Semaine de la Critique). These workflows are tested on real productions.
 
 **Hardware:** RTX 5090 (32GB local) + Comfy Cloud (96GB RTX 6000 Pro) + Mac for editing.
 
@@ -24,8 +24,8 @@ This repo documents what works, what doesn't, and how to wire it all together fo
 
 | Film | Festival | AI use |
 |---|---|---|
-| *The Goldberg Variations* (in dev) | Villa Albertine 2026 | Full generative pipeline — Blender scenes → ControlNet → Wan 2.2 |
-| *Virus* (in dev) | — | Cybercrime infrastructure visualization, Gaussian Splatting |
+| *The Goldberg Variations* (in dev) | Villa Albertine 2026 | Full generative pipeline: Blender scenes → ControlNet → Wan 2.2 |
+| *Virus* (in dev) | - | Cybercrime infrastructure visualization, Gaussian Splatting |
 
 *Screenshots and workflow exports from production will be added here as the films progress.*
 
@@ -100,7 +100,7 @@ All links are real. All stability ratings are honest. No hype.
 
 ### What works now (updated Feb 2026)
 - ComfyUI + MCP servers = Claude Code can generate images/video programmatically
-- **LTX-2**: 4K, 50fps, 20s, audio+video in one pass — production-grade
+- **LTX-2**: 4K, 50fps, 20s, audio+video in one pass, production-grade
 - **Wan 2.2**: 1080p native, MoE architecture, camera control
 - **Flux.2 Klein**: 4MP output, 10-image multi-reference, ControlNet support
 - **Seedance 2.0** (ByteDance): 2K cinema-grade, audio sync, Feb 2026
@@ -168,10 +168,10 @@ python scripts/detect-nodes.py http://YOUR_COMFYUI_IP:8188
 | Tool | Score | Notes |
 |---|---|---|
 | ComfyUI core | 9/10 | Rock solid |
-| **LTX-2** | **9/10** | **4K, 50fps, 20s, audio+video — production-ready** |
+| **LTX-2** | **9/10** | **4K, 50fps, 20s, audio+video, production-ready** |
 | Wan 2.2 workflows | 8/10 | MoE architecture, 1080p native, camera control |
 | **Flux.2 Klein** | **8/10** | **4MP, 10-image multi-ref, ControlNet stable** |
-| **Seedance 2.0** | **7/10** | **2K cinema-grade, audio sync — Feb 2026** |
+| **Seedance 2.0** | **7/10** | **2K cinema-grade, audio sync, Feb 2026** |
 | ComfyUI MCP servers | 6/10 | Multiple options, some rough edges |
 | DaVinci Resolve MCP | 5/10 | Functional, needs custom dev |
 | SwarmUI | 7/10 | Good compromise simplicity/power |
