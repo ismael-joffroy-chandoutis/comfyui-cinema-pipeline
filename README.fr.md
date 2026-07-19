@@ -1,4 +1,4 @@
-<img src="banner.svg" alt="ComfyUI Cinema Pipeline" width="100%">
+<picture><source media="(prefers-color-scheme: dark)" srcset="banner.svg"><img src="banner-light.svg" alt="ComfyUI Cinema Pipeline" width="100%"></picture>
 
 [English](README.md) · **Français**
 

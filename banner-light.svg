@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-label="ComfyUI Cinema Pipeline">
+  <rect width="1280" height="400" fill="#F2EFE9"/>
+
+  <!-- Node-graph motif: rounded rects linked by Bezier edges, one node and edge in orange -->
+  <g fill="none" stroke="#C9C4BA" stroke-width="1.5">
+    <!-- edges -->
+    <path d="M 964 107 C 1004 107, 970 77, 1010 77"/>
+    <path d="M 964 107 C 1004 107, 970 197, 1010 197"/>
+    <path d="M 964 267 C 1004 267, 970 197, 1010 197"/>
+    <path d="M 964 267 C 1004 267, 970 317, 1010 317"/>
+    <path d="M 1094 77 C 1134 77, 1100 137, 1140 137"/>
+    <path d="M 1094 197 C 1134 197, 1100 277, 1140 277"/>
+    <path d="M 1094 317 C 1134 317, 1100 277, 1140 277"/>
+  </g>
+
+  <!-- accent edge (from hub node) -->
+  <path d="M 1094 197 C 1134 197, 1100 137, 1140 137" fill="none" stroke="#FF4400" stroke-width="1.8"/>
+
+  <!-- nodes -->
+  <g fill="none" stroke="#C9C4BA" stroke-width="1.5">
+    <rect x="880" y="90"  width="84" height="34" rx="8"/>
+    <rect x="880" y="250" width="84" height="34" rx="8"/>
+    <rect x="1010" y="60"  width="84" height="34" rx="8"/>
+    <rect x="1010" y="300" width="84" height="34" rx="8"/>
+    <rect x="1140" y="120" width="84" height="34" rx="8"/>
+    <rect x="1140" y="260" width="84" height="34" rx="8"/>
+  </g>
+
+  <!-- hub node (accent) -->
+  <rect x="1010" y="180" width="84" height="34" rx="8" fill="none" stroke="#FF4400" stroke-width="1.8"/>
+
+  <!-- title -->
+  <text x="80" y="196" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="300" font-size="64" letter-spacing="0.5" fill="#141414">ComfyUI Cinema Pipeline</text>
+
+  <!-- tagline -->
+  <text x="82" y="238" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="400" font-size="22" letter-spacing="0.2" fill="#6E6A62">70+ production workflows, honest stability ratings, local and cloud GPU.</text>
+</svg>
