@@ -113,7 +113,7 @@ Tous les liens sont réels. Toutes les notes de stabilité sont honnêtes. Pas d
 
 ### Ce qui ne marche pas encore
 - Aller-retour Blender VSE → FCP (OTIO→FCP peu fiable ; utiliser DaVinci comme intermédiaire)
-- ComfyUI-BlenderAI-node sur macOS (Windows only, instable sur Mac)
+- ComfyUI-BlenderAI-node sur macOS (Windows uniquement, instable sur Mac)
 - Comfy Cloud et ComfyUI local n'ont pas de bascule transparente
 - Véritable pilotage d'un NLE headless par agent IA (phase de recherche)
 
