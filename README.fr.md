@@ -16,6 +16,8 @@ Ce dépôt documente ce qui marche, ce qui ne marche pas, et comment tout assemb
 
 **Matériel :** RTX 5090 (32GB local) + Comfy Cloud (96GB RTX 6000 Pro) + Mac pour le montage.
 
+<img src="monde.jpg" alt="comfyui-cinema-pipeline" width="100%">
+
 ---
 
 ## Films réalisés avec ce pipeline

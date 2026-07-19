@@ -16,6 +16,8 @@ This repo documents what works, what doesn't, and how to wire it all together fo
 
 **Hardware:** RTX 5090 (32GB local) + Comfy Cloud (96GB RTX 6000 Pro) + Mac for editing.
 
+<img src="monde.jpg" alt="comfyui-cinema-pipeline" width="100%">
+
 ---
 
 ## Films made with this pipeline
