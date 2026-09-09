@@ -2,24 +2,27 @@
 
 Status of ComfyUI integration with professional video editing software. Honest assessments.
 
-**TL;DR**: No NLE has native ComfyUI integration. DaVinci Resolve is closest. The workflow today is export -> process in ComfyUI -> reimport.
+**TL;DR**: No NLE has native ComfyUI integration. DaVinci Resolve is closest, and since 21.1 (September 2026) it ships an official MCP server that any assistant can drive. The workflow today is still export -> process in ComfyUI -> reimport.
 
 ---
 
 ## 1. DaVinci Resolve + ComfyUI
 
-### Stability: 5/10 -- Best positioned
+### Stability: 6/10 -- Best positioned, official agent access since 21.1
+
+**Update September 2026**: DaVinci Resolve Studio 21.1 (September 8, 2026) ships a native MCP server inside the application: 14 tools, a sandboxed Python 3.14 `run_script` with the `resolve` and `project` objects pre-injected, the installed API stubs served to the agent, DCTL compile and write, and LUT generation. `File > Setup AI Assistants` configures Claude Code, Claude Desktop, Antigravity, Codex and Grok Build; any stdio MCP client can be pointed at the binary. Studio only, local stdio only. Full notes, limits and a comparison with the community server: [DaVinci Resolve Native MCP](12-davinci-resolve-native-mcp.md).
 
 **Direct integrations**:
 
+- **Native MCP server (Blackmagic, Resolve Studio 21.1+)** -- official, ships with the app, stdio, 14 tools. See [docs/12](12-davinci-resolve-native-mcp.md).
 - [comfyUI_DaVinciResolve](https://github.com/barckley75/comfyUI_DaVinciResolve) -- TTS audio only. Dormant. 2/10 stability.
-- [DaVinci Resolve MCP (Gursky)](https://github.com/samuelgursky/davinci-resolve-mcp) -- MCP bridge for AI assistants. Claude/Cursor can control Resolve.
+- [DaVinci Resolve MCP (Gursky)](https://github.com/samuelgursky/davinci-resolve-mcp) -- community MCP server, 36 compound or 376 granular tools plus 18 "Advanced" tools (`.drx` grades, DRP/DRT work without Resolve running), guardrails on destructive operations, media analysis, batch CLI. Version 2.223.0 (September 9, 2026) already validates its DCTL wrapper against the official server. Its free-edition bridge only works on 21.0.x: free 21.1 lost Python scripting.
 - [DaVinci Resolve MCP (Tooflex)](https://glama.ai/mcp/servers/@Tooflex/davinci-resolve-mcp) -- Can execute Lua scripts in Fusion, control all pages.
 
 **Why Resolve is the best option**:
 - Full [Python/Lua scripting API](https://deric.github.io/DaVinciResolve-API-Docs/)
 - Fusion has its own [scripting guide](https://documents.blackmagicdesign.com/UserManuals/Fusion8_Scripting_Guide.pdf)
-- 2 MCP servers already exist
+- 3 MCP servers exist, one of them official
 - A custom pipeline is technically feasible:
   1. Script exports clips from timeline (Python API)
   2. Send to ComfyUI via REST/WebSocket API
@@ -187,7 +190,7 @@ Krea has an [API (Dec 2025)](https://docs.krea.ai/home) but no NLE plugin.
 | NLE | Integration Score | Path Forward |
 |---|---|---|
 | **Final Cut Pro** | 7/10 | **SpliceKit MCP** (April 2026), in-process dylib, 200+ tools, export_xml→ComfyUI→import_fcpxml. macOS 26.4+ for full stability. |
-| **DaVinci Resolve** | 5/10 | Python API + MCP servers (Gursky, Tooflex). Custom roundtrip feasible, not yet prod-ready. |
+| **DaVinci Resolve** | 6/10 | Official MCP server since 21.1 (Sept 2026) + Python API + community servers (Gursky, Tooflex). Roundtrip still custom, not yet prod-ready. |
 | **Blender** | 4/10 | Pallaidium (direct models) + ComfyUI-BlenderAI-node (ComfyUI as server). 90% install fail rate. |
 | **Premiere Pro** | 0/10 | UXP plugin buildable (Dec 2025+). JS-based, not yet built. |
 | **After Effects** | 1/10 | Pre-alpha plugin only. Use EXR sequence workflow. |

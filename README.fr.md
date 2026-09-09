@@ -93,6 +93,7 @@ Tous les liens sont réels. Toutes les notes de stabilité sont honnêtes. Pas d
 | [**Workflow Blender VSE + IA**](docs/09-blender-vse-workflow.md) | **Écosystème Pallaidium, tin2tin, stills→vidéo ControlNet, aller-retour FCP** |
 | [**Guide transfert de style**](docs/10-style-transfer.md) | **Recraft, NanoBanana Pro, Seedream 5.0-lite, entraînement LoRA, workflows batch** |
 | [**Référence API Cloud**](docs/11-cloud-api-reference.md) | **API ComfyUI Cloud + Local, serveurs MCP, bascule hybride, scripts batch** |
+| [**MCP natif DaVinci Resolve**](docs/12-davinci-resolve-native-mcp.md) | **Serveur MCP intégré à Resolve Studio 21.1 : 14 outils, installation, limites, natif contre serveur communautaire, test de recette (doc en anglais)** |
 
 ---
 
@@ -173,7 +174,7 @@ python scripts/detect-nodes.py http://YOUR_COMFYUI_IP:8188
 | **Flux.2 Klein** | **8/10** | **4MP, 10 images multi-réf, ControlNet stable** |
 | **Seedance 2.0** | **7/10** | **Qualité cinéma 2K, sync audio, février 2026** |
 | Serveurs MCP ComfyUI | 6/10 | Plusieurs options, quelques aspérités |
-| DaVinci Resolve MCP | 5/10 | Fonctionnel, nécessite du dev sur-mesure |
+| DaVinci Resolve MCP | 6/10 | Serveur officiel depuis 21.1 (sept. 2026) ; l'aller-retour reste du dev sur-mesure |
 | SwarmUI | 7/10 | Bon compromis simplicité/puissance |
 | MCWW (UI mobile) | 7/10 | S'adapte automatiquement à n'importe quel workflow |
 | Comfy Cloud | 7/10 | Marche mais coûteux en usage intensif |
