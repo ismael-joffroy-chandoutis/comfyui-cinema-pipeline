@@ -93,6 +93,7 @@ All links are real. All stability ratings are honest. No hype.
 | [**Blender VSE + AI Workflow**](docs/09-blender-vse-workflow.md) | **Pallaidium, tin2tin ecosystem, ControlNet stills→video, FCP roundtrip** |
 | [**Style Transfer Guide**](docs/10-style-transfer.md) | **Recraft, NanoBanana Pro, Seedream 5.0-lite, LoRA training, batch workflows** |
 | [**Cloud API Reference**](docs/11-cloud-api-reference.md) | **ComfyUI Cloud + Local API, MCP servers, hybrid switching, batch scripts** |
+| [**DaVinci Resolve Native MCP**](docs/12-davinci-resolve-native-mcp.md) | **Resolve Studio 21.1 built-in MCP server: 14 tools, setup, limits, native vs community server, acceptance test** |
 
 ---
 
@@ -173,7 +174,7 @@ python scripts/detect-nodes.py http://YOUR_COMFYUI_IP:8188
 | **Flux.2 Klein** | **8/10** | **4MP, 10-image multi-ref, ControlNet stable** |
 | **Seedance 2.0** | **7/10** | **2K cinema-grade, audio sync, Feb 2026** |
 | ComfyUI MCP servers | 6/10 | Multiple options, some rough edges |
-| DaVinci Resolve MCP | 5/10 | Functional, needs custom dev |
+| DaVinci Resolve MCP | 6/10 | Official server since 21.1 (Sept 2026); roundtrip still custom dev |
 | SwarmUI | 7/10 | Good compromise simplicity/power |
 | MCWW (mobile UI) | 7/10 | Auto-adapts to any workflow |
 | Comfy Cloud | 7/10 | Works but expensive for heavy use |
